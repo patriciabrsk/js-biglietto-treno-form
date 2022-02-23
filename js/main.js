@@ -3,7 +3,7 @@ document.getElementById('submit').addEventListener('click',
     // Collect data from input text form
     function() {
         const inputName = document.getElementById('inputName').value;
-        document.getElementById("user-name").innerHTML = inputName;
+        document.getElementById('user-name').innerHTML = inputName;
 
         const inputDistance = document.getElementById('inputDistance').value;
         console.log(inputDistance);
@@ -28,7 +28,6 @@ document.getElementById('submit').addEventListener('click',
 
 // Click event for cancel button
 document.getElementById('cancel').addEventListener('click', 
-
     function() {
         document.getElementById('ticket').classList.add("invisible");
     });
