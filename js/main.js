@@ -4,14 +4,13 @@ document.getElementById('submit').addEventListener('click',
     function() {
         const inputName = document.getElementById('input-name');
         const name = inputName.value;
-        // document.getElementById('user-name').innerHTML = inputName;
         console.log(inputName);
 
         const inputDistance = document.getElementById('input-distance');
-        const km = inputDistance.value;
+        const km = parseInt(inputDistance.value);
         console.log(inputDistance);
 
-        const inputAge = document.querySelector('#input-age');
+        const inputAge = document.getElementById('input-age');
         const age = inputAge.value;
         console.log(inputAge);
 
@@ -33,8 +32,6 @@ document.getElementById('submit').addEventListener('click',
         document.getElementById('price').innerHTML = `${totalPrice.toFixed(2)} &euro;`;
         document.getElementById('ticket').classList.remove("invisible");
     });
-
-// document.getElementById('price').innerHTML += ` ${totalPrice.toFixed(2)} &euro;`;
 
 // Click event for cancel button
 document.getElementById('cancel').addEventListener('click', 
