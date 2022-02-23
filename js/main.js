@@ -25,7 +25,7 @@ document.getElementById('submit').addEventListener('click',
         document.getElementById('ticket-type').innerHTML = inputAge;
         document.getElementById('train-car').innerHTML = Math.floor(Math.random() * 10) + 1;
         document.getElementById('cp-code').innerHTML = Math.floor(Math.random()*90000) + 10000;
-        document.getElementById('price').innerHTML = totalPrice.toFixed(2);
+        document.getElementById('price').innerHTML = `${totalPrice.toFixed(2)} &euro;`;
         document.getElementById('ticket').classList.remove("invisible");
     });
 
