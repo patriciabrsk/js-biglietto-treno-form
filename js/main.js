@@ -16,8 +16,10 @@ document.getElementById('submit').addEventListener('click',
 
         if (inputAge == "under18") {
             totalPrice = (standardPrice - (standardPrice * 0.17));
+            document.getElementById('ticket-type').innerHTML = "Under 18";
         } else if (inputAge == "over65") {
             totalPrice = (standardPrice - (standardPrice * 0.33));
+            document.getElementById('ticket-type').innerHTML = "Over 65";
         } else {
             totalPrice = standardPrice;
         }
