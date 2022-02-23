@@ -21,31 +21,34 @@
 </head>
 <body>
     <main>
+        <!-- Calculator form section -->
         <section id="calculator">
             <div class="container">
-                <div class="row justify-content-center py-5 text-white">
+                <div class="row justify-content-center text-center py-5 text-white">
                     <div class="col-md-8">
                         <div class="shadow p-5 mb-3 rounded">
-                            <h3 class="text-uppercase mb-5 fw-bold text-center">Calculate your ticket price</h3>
+                            <h3 class="text-uppercase mb-5 fw-bold">Calculate your ticket price</h3>
                             <form class="row g-3 justify-content-center">
                                 <div class="col-md-4">
-                                    <label for="inputName" class="form-label text-uppercase">Full Name</label>
-                                    <input type="text" class="form-control" id="inputName">
+                                    <label for="inputName" class="text-uppercase">Full Name</label>
+                                    <input type="text" class="form-control rounded-pill" id="inputName">
                                 </div>
                                 <div class="col-md-4">
-                                    <label for="inputDistance" class="form-label text-uppercase">Your distance in km</label>
-                                    <input type="text" class="form-control" id="inputDistance">
+                                    <label for="inputDistance" class="text-uppercase">Distance in km</label>
+                                    <input type="text" class="form-control rounded-pill" id="inputDistance">
                                 </div>
                                 <div class="col-md-4">
-                                    <label for="inputAge" class="form-label text-uppercase">Age range</label>
-                                    <select id="inputAge" class="form-select">
-                                        <option selected>Under 18</option>
-                                        <option>Over 65</option>
+                                    <label for="inputAge" class="text-uppercase">Age range</label>
+                                    <select id="inputAge" class="form-select rounded-pill">
+                                        <option selected disabled>Select Age</option>
+                                        <option value="under18">Under 18</option>
+                                        <option value="over65">Over 65</option>
+                                        <option value="standard">Standard</option>
                                     </select>
                                 </div>
-                                <div class="col-12 text-center py-5">
-                                    <button type="submit" class="btn btn-light text-uppercase">Submit</button>
-                                    <button type="cancel" class="btn btn-light text-uppercase">Cancel</button>
+                                <div class="col-12 text-center py-2">
+                                    <button id="submit" class="btn btn-outline-light rounded-pill text-uppercase">Submit</button>
+                                    <button id="cancel" class="btn btn-outline-light rounded-pill text-uppercase">Cancel</button>
                                 </div>
                             </form>
                         </div>
@@ -54,21 +57,47 @@
             </div>
         </section>
         
-        <section id="ticket">
+        <!-- Ticket section -->
+        <section id="ticket" class="invisible">
             <div class="container">
-                <div class="row justify-content-center text-white">
+                <div class="row justify-content-center">
                     <div class="col-md-8">
                         <div class="shadow p-5 mb-5 rounded">
-                            <h3 class="text-uppercase mb-5 fw-bold text-center">Your ticket</h3>
-                            <form class="row g-3 justify-content-center">
-                                <div class="col-md-4">
-
+                            <h3 class="text-uppercase text-center text-white mb-5 fw-bold">Your ticket</h3>
+                                <div class="col-12">
+                                    <h5 class="text-uppercase fw-bold text-white">Passenger details</h5>
+                                    <div class="border p-3 rounded">
+                                        <div class="row text-white">
+                                            <div class="col-md-4 border-end">
+                                                <div class="passenger">
+                                                    <p class="text-uppercase fw-bold">Passenger Name</p>
+                                                    <p id="user-name" class="pt-4"></p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <p class="fw-bold">Ticket Type</p>
+                                                <p id="ticket-type" class="pt-4"></p>
+                                            </div>
+                                            <div class="col-md-2">
+                                                    <p class="fw-bold">Train Car</p>
+                                                    <p id="train-car" class="pt-4"></p>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <p class="fw-bold">CP Code</p>
+                                                <p id="cp-code" class="pt-4"></p>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <p class="fw-bold">Ticket Price</p>
+                                                <p id="price" class="pt-4"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                        
                                 </div>
 
-                            </form>
                         </div>
                     </div>
-                </div>
+                </div>    
             </div>
         </section>
 
