@@ -3,7 +3,7 @@ document.getElementById('submit').addEventListener('click',
     // Collect data from input text form
     function() {
         const inputName = document.getElementById('inputName').value;
-        document.getElementById('user-name').innerHTML = inputName;
+        // document.getElementById('user-name').innerHTML = inputName;
 
         const inputDistance = document.getElementById('inputDistance').value;
         console.log(inputDistance);
@@ -21,6 +21,11 @@ document.getElementById('submit').addEventListener('click',
             totalPrice = standardPrice;
         }
 
+        document.getElementById('user-name').innerHTML = inputName;
+        document.getElementById('ticket-type').innerHTML = inputAge;
+        document.getElementById('train-car').innerHTML = Math.floor(Math.random() * 10) + 1;
+        document.getElementById('cp-code').innerHTML = Math.floor(Math.random()*90000) + 10000;
+        document.getElementById('price').innerHTML = totalPrice.toFixed(2);
         document.getElementById('ticket').classList.remove("invisible");
     });
 
@@ -30,4 +35,4 @@ document.getElementById('submit').addEventListener('click',
 document.getElementById('cancel').addEventListener('click', 
     function() {
         document.getElementById('ticket').classList.add("invisible");
-    });
+});
