@@ -2,16 +2,13 @@
 document.getElementById('submit').addEventListener('click', 
     // Collect data from input text form
     function() {
-        const inputName = document.getElementById('input-name');
-        const name = inputName.value;
+        const inputName = document.getElementById('input-name').value;
         console.log(inputName);
 
-        const inputDistance = document.getElementById('input-distance');
-        const km = parseInt(inputDistance.value);
+        const inputDistance = document.getElementById('input-distance').value;
         console.log(inputDistance);
 
-        const inputAge = document.getElementById('input-age');
-        const age = inputAge.value;
+        const inputAge = document.getElementById('input-age').value;
         console.log(inputAge);
 
         const standardPrice = (inputDistance * 0.27);
@@ -26,7 +23,6 @@ document.getElementById('submit').addEventListener('click',
         }
 
         document.getElementById('user-name').innerHTML = inputName;
-        document.getElementById('ticket-type').innerHTML = inputAge;
         document.getElementById('train-car').innerHTML = Math.floor(Math.random() * 10) + 1;
         document.getElementById('cp-code').innerHTML = Math.floor(Math.random() * 90000) + 10000;
         document.getElementById('price').innerHTML = `${totalPrice.toFixed(2)} &euro;`;
